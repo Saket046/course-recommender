@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Coursera recommender</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" class="brand-logo">A project by Saket Gupta</a>
+      <ul class="right hide-on-med-and-down">
+        <li>saketgupta9424@gmail.com</li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a>saketgupta9424@gmail.com</a></li>
+      </ul>
+      <a data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Courses recommender</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Coursera Courses recommender
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="POST" class="col s12">
+      <div class="row">
+        <form action='/predict' method="post" class="col s12">
+          <div class="row">
+            <div class="input-field col s4">
+                <label for="first_name"><b>Search Courses</b></label>
+                <br>
+              <input placeholder="Type course name to get recommendations" name="course" id="first_name" type="text" class="validate">
+            </div>
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Search Courses</button>
+      </div>
+    </form>
+      </div>
+
+      <br><h4><b>{{message}}</b></h4>
+        <br>
+      <br>{{pred}}
+        <br>
+
+    </div>
+  </div>
+
+  <!--  -->
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Me</h5>
+          <p class="grey-text text-lighten-4">I am a passionate and self motivated student of NIT Jamshedpur who aspires to become a Data scientist. This is a recommendation engine project that suggest top 10 courses according to your search criteria. Please visit my Github to see the whole code with jupyter notebook. </p>
+
+
+        </div>
+        
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="https://github.com/Saket046">Github</a></li>
+            <li><a class="white-text" href="https://www.linkedin.com/in/saket-gupta-6a91651b2/">LinkedIn</a></li>
+            <li><a class="white-text" href="https://www.kaggle.com/saket046">Kaggle</a></li>
+            <li><a class="white-text">Mail me at: saketgupta9424@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="instagram.com/saket046">Saket Gupta</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
