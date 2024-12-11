@@ -3,7 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import sigmoid_kernel
 import difflib
 from flask import Flask,request, url_for, redirect, render_template
-from flask import Markup
+from markupsafe import Markup
 
 def create_sim(search):
     df_org=pd.read_csv('Coursera.csv')
